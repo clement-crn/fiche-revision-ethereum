@@ -19,7 +19,7 @@
 *Il est possible d'accélérer une transaction au augmentant le gasPrice.*
 
 ### Est-il possible d'effectuer une transaction avec un gasPrice nulle ?
-*Oui, mais elles pourraient ne jamais être confirmées*
+*Oui, mais elle pourrait ne jamais être confirmée*
 
 ### Comment définir le recipient d'une transaction ?
 Le récipient est une addresse stockée dans le champ *To* 
