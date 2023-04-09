@@ -21,7 +21,8 @@
 ### Est-il possible d'effectuer une transaction avec un gasPrice nulle ?
 *Oui, mais elles pourraient ne jamais être confirmées*
 
-### 
+### Comment définir le recipient d'une transaction ?
+Le récipient est une addresse stockée dans le champ *To* 
 
 
 
