@@ -56,9 +56,6 @@ SOLUTION
 La manière de corriger cette faille est de s'assurer que la fonction withdraw vérifie si la transaction en cours contient des fonds avant de soustraire amount du solde de l'utilisateur. On peut le faire en modifiant la fonction comme suit :
 
 ```
-
-
-
 function withdraw(uint amount) external {
     require(balances[msg.sender] >= amount, "Insufficient balance");
     require(msg.value == 0, "Do not send funds with this transaction");
