@@ -70,6 +70,5 @@ function withdraw(uint amount) external {
 
 
 
-*Sources : Mastering Ethereum: Building Smart Contracts and Dapps - A. Antonopoulos*
 
 *N'hésitez pas à me corriger ou partager vos recommandations*
