@@ -29,6 +29,7 @@ ECDSA (Elliptic Curve Digital Signature Algorithm)
 
 ### Que génère la compilation d'un contrat solidity ?
 -L'ABI (Application Binary Interface). C'est une interface qui définit la manière dont les différents contrats interagissent entre eux. L'ABI est utilisée pour communiquer avec les contrats et appeler les fonctions qui y sont définies.
+
 -Bytecode : C'est le code qui sera exécuté sur la blockchain. Le bytecode est généré en prenant le code source Solidity et en le traduisant en langage de bas niveau qui peut être compris et exécuté par la machine virtuelle Ethereum.
 
 
