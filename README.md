@@ -32,6 +32,39 @@ ECDSA (Elliptic Curve Digital Signature Algorithm)
 
 -Bytecode : C'est le code qui sera exécuté sur la blockchain. Le bytecode est généré en prenant le code source Solidity et en le traduisant en langage de bas niveau qui peut être compris et exécuté par la machine virtuelle Ethereum.
 
+### Corriger la faille suivante :
+
+```
+contract VulnerableContract {
+    mapping(address => uint) balances;
+
+    function deposit() external payable {
+        balances[msg.sender] += msg.value;
+    }
+
+    function withdraw(uint amount) external {
+        require(balances[msg.sender] >= amount, "Insufficient balance");
+        (bool success, ) = msg.sender.call{value: amount}("");
+        require(success, "Failed to send funds");
+        balances[msg.sender] -= amount;
+    }
+}
+```
+SOLUTION
+
+```
+La manière de corriger cette faille est de s'assurer que la fonction withdraw vérifie si la transaction en cours contient des fonds avant de soustraire amount du solde de l'utilisateur. On peut le faire en modifiant la fonction comme suit :
+
+
+function withdraw(uint amount) external {
+    require(balances[msg.sender] >= amount, "Insufficient balance");
+    require(msg.value == 0, "Do not send funds with this transaction");
+    (bool success, ) = msg.sender.call{value: amount}("");
+    require(success, "Failed to send funds");
+    balances[msg.sender] -= amount;
+}
+```
+
 
 
 *Sources : Mastering Ethereum: Building Smart Contracts and Dapps - A. Antonopoulos*
