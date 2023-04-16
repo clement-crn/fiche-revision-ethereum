@@ -25,12 +25,12 @@
 Le récipient est une addresse stockée dans le champ *To*
 
 ### Quel est le nom de l'algorithme utilisé pour sécuriser la signature d'une transaction ?
-ECDSA (Elliptic Curve Digital Signature Algorithm)
+*ECDSA (Elliptic Curve Digital Signature Algorithm)*
 
 ### Que génère la compilation d'un contrat solidity ?
--L'ABI (Application Binary Interface). C'est une interface qui définit la manière dont les différents contrats interagissent entre eux. L'ABI est utilisée pour communiquer avec les contrats et appeler les fonctions qui y sont définies.
+*-L'ABI (Application Binary Interface). C'est une interface qui définit la manière dont les différents contrats interagissent entre eux. L'ABI est utilisée pour communiquer avec les contrats et appeler les fonctions qui y sont définies.
 
--Bytecode : C'est le code qui sera exécuté sur la blockchain. Le bytecode est généré en prenant le code source Solidity et en le traduisant en langage de bas niveau qui peut être compris et exécuté par la machine virtuelle Ethereum.
+-Bytecode : C'est le code qui sera exécuté sur la blockchain. Le bytecode est généré en prenant le code source Solidity et en le traduisant en langage de bas niveau qui peut être compris et exécuté par la machine virtuelle Ethereum.*
 
 ### Corriger la faille suivante :
 
@@ -53,7 +53,7 @@ contract VulnerableContract {
 
 SOLUTION
 
-La manière de corriger cette faille est de s'assurer que la fonction withdraw vérifie si la transaction en cours contient des fonds avant de soustraire amount du solde de l'utilisateur. On peut le faire en modifiant la fonction comme suit :
+*La manière de corriger cette faille est de s'assurer que la fonction withdraw vérifie si la transaction en cours contient des fonds avant de soustraire amount du solde de l'utilisateur. On peut le faire en modifiant la fonction comme suit :*
 
 ```
 function withdraw(uint amount) external {
