@@ -53,7 +53,7 @@ contract VulnerableContract {
 
 SOLUTION
 
-*La manière de corriger cette faille est de s'assurer que la fonction withdraw vérifie si la transaction en cours contient des fonds avant de soustraire amount du solde de l'utilisateur. On peut le faire en modifiant la fonction comme suit :*
+*La manière de corriger cette faille est de s'assurer que la fonction withdraw vérifie si la transaction en cours contient des fonds avant de soustraire amount du solde de l'utilisateur. On peut le faire en modifiant la fonction comme suit:*
 
 ```
 function withdraw(uint amount) external {
